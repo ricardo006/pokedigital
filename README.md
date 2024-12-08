@@ -95,17 +95,15 @@ src/
 2. Acesse a aplicação no navegador em [http://localhost:3000](http://localhost:3000).
 
 ## Uso
-1. Utilize a barra de busca para filtrar os Pokémons pelo nome.
+1. Use a barra de busca para filtrar os Pokémons pelo nome.
 2. Alterne entre os modos de visualização (cards ou tabela) utilizando o botão de alternância.
 3. Configure a quantidade de Pokémons a serem exibidos na interface.
-
-
-## Licença
-Este projeto é licenciado sob a [MIT License](LICENSE).
+4. Use as telas Arrow Up e Arrow Down
+5. Use os comandos (CTRL + /)
 
 ## Contato
 Caso tenha dúvidas ou sugestões, entre em contato:
-- Nome: [Seu Nome]
-- Email: [Seu Email]
-- LinkedIn: [Seu Perfil no LinkedIn]
+- Nome: Ricardo Oliveira
+- Email: rycardo.191@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ricardo-o-441a22a5/
 
