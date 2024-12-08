@@ -19,9 +19,9 @@ const getRandomColor = () => {
 
 const PokemonCard = ({ name, image, types, abilities }) => {
   const typeHandler = (types) => {
-    if (!types || types.length === 0) {
+    if (!types || types.length === 0)
       return <span>No types available</span>;
-    }
+    
 
     return types.map((type, index) => (
       <React.Fragment key={index}>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Grid, Box } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import NavBar from "../components/NavBar";
 import PokemonCard from "../components/PokemonCard";
 import PokemonTable from "../components/PokemonTable";
