@@ -1,0 +1,37 @@
+.search-container {
+    position: relative;
+    background-color: #0d1b2a;
+}
+
+.search-container:hover {
+    background-color: #0d1b2a;
+}
+
+.search-icon-wrapper {
+    margin: 0px 16px;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbf3f0;
+}
+
+.styled-input {
+    color: #cbf3f0;
+    width: 100%;
+    padding: 8px 8px 8px 0;
+    padding-left: calc(1em + 32px);
+}
+
+@media (min-width: 600px) {
+    .styled-input {
+        width: 30ch;
+    }
+
+    .styled-input:focus {
+        width: 20ch;
+    }
+}
+

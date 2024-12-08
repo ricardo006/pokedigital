@@ -1,0 +1,53 @@
+:root {
+    --text-color: #cbf3f0;
+    --column-hover-color: #02121f;
+}
+
+.pokemon-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-head-pokemon {
+    background-color: #011627;
+    color: var(--text-color);
+    border-radius: 20px;
+}
+
+.table-head-pokemon .MuiTableCell-root:first-of-type {
+    border-top-left-radius: 20px;
+}
+
+.table-head-pokemon .MuiTableCell-root:last-of-type {
+    border-top-right-radius: 20px;
+}
+
+.table-body-pokemon {
+    background-color: #011627;
+    border: 0 !important;
+    color: var(--text-color);
+}
+
+.table-cell {
+    padding: 8px;
+    border: 1px solid #011627;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.table-row-hover:hover {
+    background-color: #051e33;
+    color: var(--text-color);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.item-badge {
+    color: #086375;
+    background-color: #b2f7ef;
+    font-weight: 500
+}
+
+.MuiAvatar-root {
+    border-radius: 50%;
+}
