@@ -11,6 +11,7 @@ export const Home = () => {
   const [filteredPokemons, setFilteredPokemons] = useState([]);
   const [viewMode, setViewMode] = useState('table');
   const [count, setCount] = useState(100);
+  const [totalCount, setTotalCount] = useState(0);
 
   // Buscar pokémons com base na quantidade
   useEffect(() => {
@@ -20,6 +21,7 @@ export const Home = () => {
         const data = await pokemonService.getPokemons(count); 
         setPokemons(data);
         setFilteredPokemons(data);
+        setTotalCount(data.length);
       } catch (error) {
         console.error('Erro ao buscar pokémons:', error);
       }
@@ -53,7 +55,8 @@ export const Home = () => {
         <ViewToggleButton 
           viewMode={viewMode}
           onToggleView={() => setViewMode(viewMode === 'cards' ? 'table' : 'cards')}
-          count={count}
+          count={filteredPokemons.length}
+          totalCount={totalCount}
           onCountChange={handleCountChange}
         />
 
