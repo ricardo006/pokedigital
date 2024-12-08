@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Card, CardContent, TableHead, TableBody, TableRow, TableCell, Typography, Box, Table, Avatar } from '@mui/material';
+import { Container, TableHead, TableBody, TableRow, TableCell, Typography, Box, Table, Avatar } from '@mui/material';
 import { styled } from '@mui/system';
 import './PokemonTable.css';
 import CardNotFound from '../CardNotFound';

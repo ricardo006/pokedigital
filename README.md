@@ -2,7 +2,6 @@
 
 ![Tela inicial](public/images/imagens-projeto/Home.png)
 
-
 ## Descrição
 Este é um projeto desenvolvido em React utilizando a biblioteca Material-UI (MUI) para construir uma interface moderna e responsiva. A aplicação exibe uma lista de Pokémons, permitindo visualizar suas informações em dois formatos: cards e tabela. Além disso, o projeto inclui funcionalidades de busca e controle do número de Pokémons exibidos entre outras funcionalidades. Veja abaixo:
 
@@ -13,6 +12,9 @@ Este é um projeto desenvolvido em React utilizando a biblioteca Material-UI (MU
 - Exibir informações detalhadas dos Pokémons, como tipos, habilidades e imagem.
 - Pesquisa por comando (Ctrl + /) ou (Cmd + /)
 - Navegação pelas teclas Arrow Up e Arrow Down
+
+## Explore o projeto
+- Navegação focada em UX/UI, permitindo responsividade para atender dispositivos móveis, tablets e Desktop.
 
 ## Tecnologias Utilizadas
 - **React**: Framework JavaScript para construir interfaces de usuário.
@@ -37,7 +39,10 @@ src/
 |-- pages/
 |   |-- Home.jsx
 |
-|-- App.js
+|-- utils/
+|   |-- index.jsx
+|
+|-- App.jsx
 |-- index.css
 |-- index.js
 ```
@@ -57,28 +62,27 @@ src/
 ### Passos para Instalação
 
 ### Instalando Material-UI e Ícones
-1. Instale a biblioteca Material-UI:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/ricardo006/pokedigital.git
+
+2. Instale a biblioteca Material-UI:
    ```bash
    npm install @mui/material @emotion/react @emotion/styled
    # ou
    yarn add @mui/material @emotion/react @emotion/styled
    ```
-
-2. Instale os ícones do Material-UI:
+3. Instale os ícones do Material-UI:
    ```bash
    npm install @mui/icons-material
    # ou
    yarn add @mui/icons-material
    ```
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/ricardo006/pokedigital.git
-   ```
-2. Navegue até o diretório do projeto:
+4. Navegue até o diretório do projeto:
    ```bash
    cd pokedigital
    ```
-3. Instale as dependências:
+5. Instale as dependências:
    ```bash
    npm install
    # ou

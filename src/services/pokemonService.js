@@ -15,6 +15,8 @@ const getPokemons = async (count = 100) => {
   }
 };
 
-export default {
+const pokemonService = {
   getPokemons,
-};
+}
+
+export default pokemonService;
