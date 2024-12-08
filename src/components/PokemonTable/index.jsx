@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Card, CardContent, TableHead, TableBody, TableRow, TableCell, Typography, Box, Table, Avatar } from '@mui/material';
 import { styled } from '@mui/system';
 import './PokemonTable.css';
+import CardNotFound from '../CardNotFound';
+import { getInitials, handleKeyNavigation } from '../../utils';
 
 const Badge = styled(Box)({
     display: 'inline-block',
@@ -13,32 +15,19 @@ const Badge = styled(Box)({
     color: '#333',
 });
 
-const getInitials = (name) => {
-    const words = name.split(' ');
-    return words.length > 1
-        ? words[0].charAt(0).toUpperCase() + words[1].charAt(0).toUpperCase()
-        : name.charAt(0).toUpperCase();
-};
-
 const PokemonTableBody = ({ pokemons }) => {
-    const [focusIndex, setFocusIndex] = useState(null); // Indica o índice do item em foco
-    const tableRef = React.useRef(null); // Referência para o corpo da tabela
+    const [focusIndex, setFocusIndex] = useState(null);
+    const tableRef = React.useRef(null);
 
     const handleKeyDown = (e) => {
-        if (e.key === 'ArrowDown') {
-            // Navegar para o próximo item
-            setFocusIndex((prevIndex) => (prevIndex === null ? 0 : Math.min(prevIndex + 1, pokemons.length - 1)));
-        } else if (e.key === 'ArrowUp') {
-            // Navegar para o item anterior
-            setFocusIndex((prevIndex) => (prevIndex === null ? 0 : Math.max(prevIndex - 1, 0)));
-        }
+        handleKeyNavigation(e, pokemons, setFocusIndex);
     };
 
     const handleMouseEnter = (index) => {
-        setFocusIndex(index); // Focar no item ao passar o mouse
+        setFocusIndex(index);
     };
 
-    // Garantir que o item em foco esteja visível na tela
+    // Garantindo que o item em foco esteja visível na tela
     React.useEffect(() => {
         if (focusIndex !== null && tableRef.current) {
             const row = tableRef.current.querySelector(`[data-index="${focusIndex}"]`);
@@ -54,25 +43,7 @@ const PokemonTableBody = ({ pokemons }) => {
     if (pokemons.length === 0) {
         return (
             <Container>
-                <Card sx={{ padding: '20px', backgroundColor: '#0d1b2a', border: 0, boxShadow: 'none' }}>
-                    <CardContent>
-                        <Typography variant="h6" sx={{ textAlign: 'center', color: '#cbf3f0' }}>
-                            Nenhum pokémon encontrado.
-                            <img
-                                src="/images/search.svg"
-                                alt="Nenhum resultado encontrado."
-                                style={{
-                                    margin: '20px auto',
-                                    backgroundColor: '#b2f7ef',
-                                    width: 180,
-                                    height: 180,
-                                    display: 'block',
-                                    borderRadius: 20,
-                                }}
-                            />
-                        </Typography>
-                    </CardContent>
-                </Card>
+                <CardNotFound />
             </Container>
         );
     }

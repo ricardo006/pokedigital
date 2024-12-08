@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import Container from '@mui/material/Container';
+import { addShortcutFocusListener } from '../../utils';
 
 import './NavBar.css';
 
@@ -55,17 +56,8 @@ export default function SearchAppBar({ pokemonFilter }) {
     const searchInputRef = useRef(null);
 
     useEffect(() => {
-        const handleShortcutFocus = (e) => {
-            if ((e.ctrlKey || e.metaKey) && e.key === '/') {
-                e.preventDefault();
-                searchInputRef.current?.querySelector('input')?.focus();
-            }
-        };
-
-        window.addEventListener('keydown', handleShortcutFocus);
-        return () => {
-            window.removeEventListener('keydown', handleShortcutFocus);
-        };
+        const cleanup = addShortcutFocusListener(searchInputRef);
+        return cleanup;
     }, []);
 
     const handleInputChange = (e) => {
