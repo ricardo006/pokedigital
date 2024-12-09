@@ -1,0 +1,27 @@
+.content-view {
+    margin: 20px auto;
+    color: #cbf3f0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.tableorcard-title {
+    flex-grow: 1;
+    font-size: 16;
+    font-weight: 600;
+    font-family: 'Inter';
+    justify-content: space-between;
+    align-self: 'center';
+    text-align: 'left';
+}
+
+.box-count {
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: #b2f7ef !important;
+}

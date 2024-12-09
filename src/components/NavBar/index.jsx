@@ -77,8 +77,9 @@ export default function SearchAppBar({ pokemonFilter }) {
                     color: '#cbf3f0',
                     borderRadius: '20px',
                     marginTop: '12px',
-                    border: '1px solid #032541',
-                    height: 70
+                    border: '1.8px solid #032541',
+                    height: 70,
+                    boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
                 }}
             >
                 <Container maxWidth="sx">

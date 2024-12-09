@@ -17,6 +17,7 @@ const CountInput = ({ count, onCountChange }) => {
             size="small"
             sx={{
                 width: '220px',
+                height: '45px !important',
                 marginRight: '20px',
                 '& .MuiOutlinedInput-root': {
                     '& fieldset': {

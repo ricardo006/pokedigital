@@ -1,0 +1,10 @@
+.btncardsortable {
+    text-transform: none !important;
+    align-self: flex-start !important;
+    background-color: #b2f7ef !important;
+    color: #0d1b2a !important;
+    width: 120px;
+    height: 45px;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+}

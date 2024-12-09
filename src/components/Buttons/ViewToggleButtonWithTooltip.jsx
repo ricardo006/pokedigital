@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Tooltip } from '@mui/material';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import GridViewIcon from '@mui/icons-material/GridView';
+import './ViewToggleButtonWithTooltip.css';
 
 const ViewToggleButtonWithTooltip = ({ viewMode, onToggleView }) => {
   return (
@@ -10,15 +11,7 @@ const ViewToggleButtonWithTooltip = ({ viewMode, onToggleView }) => {
         variant="contained"
         onClick={onToggleView}
         startIcon={viewMode === 'cards' ? <ViewListIcon /> : <GridViewIcon />}
-        sx={{
-          textTransform: 'none',
-          alignSelf: 'flex-start',
-          backgroundColor: '#b2f7ef',
-          color: '#0d1b2a',
-          width: 120,
-          height: 40,
-          borderRadius: '10px',
-        }}
+        className='btncardsortable'
       >
         {viewMode === 'cards' ? 'Tabela' : 'Cards'}
       </Button>

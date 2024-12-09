@@ -1,16 +1,17 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import CountInput from '../TextFields/TextFieldPokemons';
 import ViewToggleButtonWithTooltip from './ViewToggleButtonWithTooltip';
+import './ViewToggleButton.css';
 
 const ViewToggleButton = ({ viewMode, onToggleView, count, totalCount, onCountChange }) => {
   return (
-    <div style={{ margin: '20px auto', color: '#cbf3f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-      <Typography variant="h6" sx={{ flexGrow: 1, fontSize: 14, fontWeight: 600, fontFamily: 'Inter', justifyContent: 'space-between', alignSelf: 'center', textAlign: 'left' }}>
+    <div className='content-view'>
+      <Typography variant="h6" className='tableorcard-title'>
         {viewMode === 'cards' ? 'Exibindo Cards' : 'Exibindo Tabela'}
-        <span style={{ marginLeft: '10px', fontSize: 14, fontWeight: 400, color: '#b2f7ef' }}>
+        <Box className='box-count'>
           {`Exibindo ${count} de ${totalCount} resultados`}
-        </span>
+        </Box>
       </Typography>
 
       <CountInput count={count} onCountChange={onCountChange} />
