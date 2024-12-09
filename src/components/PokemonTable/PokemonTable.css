@@ -1,6 +1,6 @@
 :root {
-    --text-color: #cbf3f0;
-    --column-hover-color: #02121f;
+    --text-color: #cbf3f0 !important;
+    --column-hover-color: #02121f !important;
 }
 
 .pokemon-table {
@@ -9,9 +9,10 @@
 }
 
 .table-head-pokemon {
-    background-color: #011627;
-    color: var(--text-color);
+    background-color: #011627 !important;
+    color: var(--text-color) ;
     border-radius: 20px;
+    border: none !important;
 }
 
 .table-head-pokemon .MuiTableCell-root:first-of-type {

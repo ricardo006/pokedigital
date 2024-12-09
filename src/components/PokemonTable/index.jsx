@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Container, TableHead, TableBody, TableRow, TableCell, Typography, Box, Table, Avatar } from '@mui/material';
 import { styled } from '@mui/system';
-import './PokemonTable.css';
 import CardNotFound from '../CardNotFound';
 import { getInitials, handleKeyNavigation } from '../../utils';
+import './PokemonTable.css';
 
 const Badge = styled(Box)({
     display: 'inline-block',
@@ -100,6 +100,7 @@ const PokemonTableBody = ({ pokemons }) => {
                                     </Avatar>
                                 )}
                             </TableCell>
+
                             <TableCell sx={{ color: 'var(--text-color)', border: 0 }}>
                                 <Typography variant="subtitle1">
                                     {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
@@ -112,6 +113,7 @@ const PokemonTableBody = ({ pokemons }) => {
                                     ))}
                                 </Box>
                             </TableCell>
+
                             <TableCell sx={{ border: 0 }}>
                                 {pokemon.types.map((type, i) => (
                                     <Typography sx={{ color: 'var(--text-color)' }} key={i} variant="body2" color="textSecondary">
