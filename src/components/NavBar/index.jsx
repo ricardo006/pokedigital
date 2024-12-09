@@ -74,7 +74,7 @@ export default function SearchAppBar({ pokemonFilter }) {
                     overflowX: 'hidden',
                     backgroundColor: '#011627',
                     color: '#cbf3f0',
-                    borderRadius: '20px',
+                    borderRadius: '20px 20px 0 0',
                     marginTop: '12px',
                     border: '1.8px solid #032541',
                     height: 70,

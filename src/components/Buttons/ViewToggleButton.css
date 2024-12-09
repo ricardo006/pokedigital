@@ -1,27 +1,77 @@
 .content-view {
-    margin: 50px auto;
+    margin: 0px auto 50px;
     color: #cbf3f0 !important;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    align-items: flex-start;
+    position: relative;
+    background-color: #032541;
+    padding: 20px;
+    z-index: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column !important;
+    margin-bottom: 10px;
 }
 
 .tableorcard-title {
-    flex-grow: 1;
-    font-size: 16;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left !important;
+    font-size: 16px;
     font-weight: 600;
     font-family: 'Inter';
-    justify-content: space-between;
-    align-self: 'center';
-    text-align: 'left';
+    width: 100%;
 }
 
 .box-count {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column !important;
     text-align: left;
     font-size: 14px;
+    flex-basis: 100%;
     font-weight: 500 !important;
     color: #b2f7ef !important;
+    margin: 10px 0 20px 0px !important;
+}
+
+@media (min-width: 600px) {
+    .action-container {
+        flex-direction: column;
+      }
+
+    .content-view {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .tableorcard-title {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .tableorcard-title {
+        margin-top: 0;
+        font-size: 14px;
+    }
+
+    .box-count {
+        flex-basis: auto;
+        margin: 10px 0 20px 0px !important;
+        font-size: 14px !important;
+    }
+
 }
