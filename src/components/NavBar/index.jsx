@@ -72,7 +72,6 @@ export default function SearchAppBar({ pokemonFilter }) {
                 position="static" 
                 sx={{
                     overflowX: 'hidden',
-                    boxShadow: 'none',
                     backgroundColor: '#011627',
                     color: '#cbf3f0',
                     borderRadius: '20px',
